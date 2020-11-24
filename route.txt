@@ -1,0 +1,38 @@
++--------+-----------+--------------------------------+--------------------+------------------------------------------------------------+-------------------------------------------------+
+|[32m Domain [39m|[32m Method    [39m|[32m URI                            [39m|[32m Name               [39m|[32m Action                                                     [39m|[32m Middleware                                      [39m|
++--------+-----------+--------------------------------+--------------------+------------------------------------------------------------+-------------------------------------------------+
+|        | GET|HEAD  | /                              |                    | Closure                                                    | web                                             |
+|        | POST      | _ignition/execute-solution     |                    | Facade\Ignition\Http\Controllers\ExecuteSolutionController | Facade\Ignition\Http\Middleware\IgnitionEnabled |
+|        | GET|HEAD  | _ignition/health-check         |                    | Facade\Ignition\Http\Controllers\HealthCheckController     | Facade\Ignition\Http\Middleware\IgnitionEnabled |
+|        | GET|HEAD  | _ignition/scripts/{script}     |                    | Facade\Ignition\Http\Controllers\ScriptController          | Facade\Ignition\Http\Middleware\IgnitionEnabled |
+|        | POST      | _ignition/share-report         |                    | Facade\Ignition\Http\Controllers\ShareReportController     | Facade\Ignition\Http\Middleware\IgnitionEnabled |
+|        | GET|HEAD  | _ignition/styles/{style}       |                    | Facade\Ignition\Http\Controllers\StyleController           | Facade\Ignition\Http\Middleware\IgnitionEnabled |
+|        | GET|HEAD  | api/articles                   | articles.index     | App\Http\Controllers\ArticleController@index               | api                                             |
+|        | POST      | api/articles                   | articles.store     | App\Http\Controllers\ArticleController@store               | api                                             |
+|        | GET|HEAD  | api/articles/categories/{id}   |                    | App\Http\Controllers\CategoryController@articleList        | api                                             |
+|        | GET|HEAD  | api/articles/create            | articles.create    | App\Http\Controllers\ArticleController@create              | api                                             |
+|        | GET|HEAD  | api/articles/{article}         | articles.show      | App\Http\Controllers\ArticleController@show                | api                                             |
+|        | PUT|PATCH | api/articles/{article}         | articles.update    | App\Http\Controllers\ArticleController@update              | api                                             |
+|        | DELETE    | api/articles/{article}         | articles.destroy   | App\Http\Controllers\ArticleController@destroy             | api                                             |
+|        | GET|HEAD  | api/articles/{article}/edit    | articles.edit      | App\Http\Controllers\ArticleController@edit                | api                                             |
+|        | GET|HEAD  | api/articlesList/{userid}      |                    | App\Http\Controllers\ArticleController@articlesList        | api                                             |
+|        | POST      | api/bulk_articde_destroy       |                    | App\Http\Controllers\ArticleController@bulk_destroy        | api                                             |
+|        | POST      | api/categories                 | categories.store   | App\Http\Controllers\CategoryController@store              | api                                             |
+|        | GET|HEAD  | api/categories                 | categories.index   | App\Http\Controllers\CategoryController@index              | api                                             |
+|        | GET|HEAD  | api/categories/create          | categories.create  | App\Http\Controllers\CategoryController@create             | api                                             |
+|        | GET|HEAD  | api/categories/{category}      | categories.show    | App\Http\Controllers\CategoryController@show               | api                                             |
+|        | PUT|PATCH | api/categories/{category}      | categories.update  | App\Http\Controllers\CategoryController@update             | api                                             |
+|        | DELETE    | api/categories/{category}      | categories.destroy | App\Http\Controllers\CategoryController@destroy            | api                                             |
+|        | GET|HEAD  | api/categories/{category}/edit | categories.edit    | App\Http\Controllers\CategoryController@edit               | api                                             |
+|        | GET|HEAD  | api/headCats                   |                    | App\Http\Controllers\CategoryController@headCats           | api                                             |
+|        | POST      | api/login                      |                    | App\Http\Controllers\UserController@login                  | api                                             |
+|        | POST      | api/register                   |                    | App\Http\Controllers\Usercontroller@register               | api                                             |
+|        | GET|HEAD  | api/searchArticle/{phrase}     |                    | App\Http\Controllers\ArticleController@searchArticle       | api                                             |
+|        | PUT       | api/update_status/{id}         |                    | App\Http\Controllers\ArticleController@update_status       | api                                             |
+|        | PUT       | api/update_user                |                    | App\Http\Controllers\Usercontroller@update_user            | api                                             |
+|        | GET|HEAD  | api/uploadImagesList/{section} |                    | App\Http\Controllers\uploadcontroller@uploadImagesList     | api                                             |
+|        | POST      | api/uploadImg                  |                    | App\Http\Controllers\uploadcontroller@uploadImg            | api                                             |
+|        | GET|HEAD  | api/user                       |                    | Closure                                                    | api,auth:api                                    |
+|        | POST      | uploadImage                    | uploadImage        | App\Http\Controllers\uploadcontroller@uploadImage          | web                                             |
+|        | GET|HEAD  | upload_image                   |                    | App\Http\Controllers\uploadcontroller@index                | web                                             |
++--------+-----------+--------------------------------+--------------------+------------------------------------------------------------+-------------------------------------------------+
